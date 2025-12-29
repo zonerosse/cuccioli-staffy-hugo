@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | Del Piccolo Diavolo{{ end }}</title>
+<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="theme-color" content="#f7f5f0">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Allevamento Del Piccolo Diavolo">
+<meta property="og:title" content="{{ if .IsHome }}Cuccioli Staffordshire Bull Terrier{{ else }}{{ .Title }}{{ end }}">
+<meta property="og:description" content="{{ .Site.Params.description }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:image" content="{{ .Site.Params.imagekit }}/billy-640.webp">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PetStore",
+  "name": "Del Piccolo Diavolo - Allevamento Staffordshire Bull Terrier",
+  "url": "{{ .Site.BaseURL }}",
+  "telephone": "{{ .Site.Params.telefono }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via A. Chierici 12",
+    "addressLocality": "Ostellato",
+    "addressRegion": "FE",
+    "postalCode": "44020",
+    "addressCountry": "IT"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "36"
+  }
+}
+</script>
+
+<!-- Preconnect -->
+<link rel="preconnect" href="https://ik.imagekit.io">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Google Fonts -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=optional" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=optional"></noscript>
+
+{{ if .IsHome }}
+<link rel="preload" as="image" href="{{ .Site.Params.imagekit }}/billy-640.webp?tr=w-800,h-1000,fo-top,q-85" fetchpriority="high">
+{{ end }}
+</head>
+<body>
+
+{{ partial "nav.html" . }}
+{{ partial "mobile-menu.html" . }}
+
+<main>
+{{ block "main" . }}{{ end }}
+</main>
+
+{{ partial "footer.html" . }}
+{{ partial "whatsapp.html" . }}
+
+<script>
+function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+}
+</script>
+
+</body>
+</html>

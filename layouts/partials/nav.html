@@ -1,0 +1,20 @@
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <img src="/images/logo.webp" alt="" class="nav-logo-img" width="40" height="40">
+            <span class="nav-logo-text">Del <span>Piccolo</span> Diavolo</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/" {{ if .IsHome }}class="active"{{ end }}>Home</a></li>
+            <li><a href="/cuccioli.html">Cuccioli</a></li>
+            <li><a href="/cuccioli-nord-italia.html">Nord Italia</a></li>
+            <li><a href="/#femmine">Femmine</a></li>
+            <li><a href="/#maschi">Maschi</a></li>
+            <li><a href="/#contatti">Contatti</a></li>
+        </ul>
+        <a href="https://wa.me/{{ .Site.Params.whatsapp }}?text=Ciao%20Paolo%2C%20ti%20scrivo%20dal%20sito%20Cuccioli%20Staffy" class="nav-cta" aria-label="Contattaci su WhatsApp">WhatsApp</a>
+        <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>

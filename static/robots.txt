@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cuccioli-staffy.it/sitemap.xml
