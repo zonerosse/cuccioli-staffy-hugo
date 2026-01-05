@@ -32,9 +32,13 @@ title = 'Cuccioli Staffordshire Bull Terrier | Del Piccolo Diavolo'
     url = "/#maschi"
     weight = 5
   [[menu.main]]
+    name = "FAQ"
+    url = "/#domande"
+    weight = 6
+  [[menu.main]]
     name = "Contatti"
     url = "/#contatti"
-    weight = 6
+    weight = 7
 
 disableKinds = ['RSS', 'taxonomy', 'term', 'section']
 
