@@ -785,6 +785,7 @@ img { max-width: 100%; height: auto; display: block; }
     .hero {
         flex-direction: row;
         min-height: 100vh;
+        position: relative;
     }
 
     .hero-visual {
@@ -800,6 +801,7 @@ img { max-width: 100%; height: auto; display: block; }
     .hero-content {
         flex: 1;
         padding: 4rem;
+        padding-bottom: 10rem;
     }
 
     .hero-title { font-size: 3rem; }
