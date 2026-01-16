@@ -1,15 +1,13 @@
 baseURL = 'https://cuccioli-staffy.it/'
 languageCode = 'it'
-title = 'Cuccioli Staffordshire Bull Terrier | Del Piccolo Diavolo'
-
+title = 'Cuccioli Staffordshire Bull Terrier'
 [params]
-  description = "Cuccioli Staffordshire Bull Terrier dell'allevamento Del Piccolo Diavolo: Cuccioli Staffy da linee inglesi e irlandesi, esenti da malattie genetiche."
+  description = "Cuccioli Staffordshire Bull Terrier da linee inglesi e irlandesi, testati geneticamente. Pedigree ENCI, socializzati in famiglia."
   telefono = "+39 392 463 5584"
   whatsapp = "393924635584"
   email = "zonerosse@gmail.com"
   indirizzo = "Via A. Chierici 12, Ostellato (FE)"
   imagekit = "https://ik.imagekit.io/piccolodiavolo"
-
 [menu]
   [[menu.main]]
     name = "Home"
@@ -39,14 +37,11 @@ title = 'Cuccioli Staffordshire Bull Terrier | Del Piccolo Diavolo'
     name = "Contatti"
     url = "/#contatti"
     weight = 7
-
 disableKinds = ['RSS', 'taxonomy', 'term', 'section']
-
 [sitemap]
   changefreq = 'weekly'
   filename = 'sitemap.xml'
   priority = 0.5
-
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
